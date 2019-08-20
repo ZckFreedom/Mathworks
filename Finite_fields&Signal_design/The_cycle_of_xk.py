@@ -237,3 +237,5 @@ def all_multipy(a_text):
 for i in [5, 7, 11, 13, 17, 19, 20]:
 	the_text = ConsequenceOfFxk([1, 1, 2], 5, i)
 	all_multipy(the_text)
+
+#测试用
