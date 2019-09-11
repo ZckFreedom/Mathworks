@@ -208,6 +208,9 @@ class ConsequenceOfFxk:
 
 
 def all_cycle_of_k(a_irreducible_polynomial, p):
+	"""
+	走遍所有可能的k值
+	"""
 	n = len(a_irreducible_polynomial) - 1
 	cycle_order = p ** n - 1
 	for the_k in range(2, cycle_order):
@@ -221,6 +224,9 @@ def all_cycle_of_k(a_irreducible_polynomial, p):
 
 
 def all_multipy(a_text):
+	"""
+	遍历a的所有可能
+	"""
 	if not isinstance(a_text, ConsequenceOfFxk):
 		return
 	f_ply = a_text.get_context()
@@ -238,4 +244,4 @@ def all_multipy(a_text):
 # for i in [31, 41]:
 # 	the_text = ConsequenceOfFxk([1, 1, 3], 7, i)
 # 	all_multipy(the_text)
-# 简单置换多项式
+# 简单置换多项式和置换表
