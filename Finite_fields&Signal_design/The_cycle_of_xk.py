@@ -238,4 +238,4 @@ def all_multipy(a_text):
 # for i in [31, 41]:
 # 	the_text = ConsequenceOfFxk([1, 1, 3], 7, i)
 # 	all_multipy(the_text)
-# 置换多项式
+# 简单置换多项式
