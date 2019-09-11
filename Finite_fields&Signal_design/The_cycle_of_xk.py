@@ -173,7 +173,7 @@ class ConsequenceOfFxk:
 		for cnt in range(0, len(finally_cycle_list)):
 			cycle_list = finally_cycle_list[cnt]
 			G.add_cycle(cycle_list)
-		plt.figure(figsize=(20, 12))
+		plt.figure(figsize=(16, 10))
 		nx.draw_shell(G, arrows=True, with_labels=True, node_size=500, width=2, node_color='r')
 		plt.savefig('C:/Users/lenovo/Desktop/python学习内容/工作成果/xk图/p={0}_and_n={1}_and_k={2}.png'
 		            .format(self._context.get_context().get_home(), self._context.get_context().get_deg(), self._context.get_powers()),
@@ -186,7 +186,7 @@ class ConsequenceOfFxk:
 		for cnt in range(0, len(finally_cycle_list)):
 			cycle_list = finally_cycle_list[cnt]
 			G.add_cycle(cycle_list)
-		plt.figure(figsize=(20, 12))
+		plt.figure(figsize=(16, 10))
 		nx.draw_shell(G, arrows=True, with_labels=True, node_size=500, width=2, node_color='r')
 		plt.savefig('C:/Users/lenovo/Desktop/python学习内容/工作成果/a_xk图/p={0}_n={1}_k={2}_a={3}.png'
 		            .format(self._context.get_context().get_home(), self._context.get_context().get_deg(),
@@ -195,7 +195,8 @@ class ConsequenceOfFxk:
 		# plt.show()
 		
 
-# the_text = ConsequenceOfFxk([1, 1, 0, 0, 1], 2, 14)
+# the_text = ConsequenceOfFxk([1, 1, 0, 0, 2], 3, 49)
+# print(the_text.cycle_of_all_element_and_multipy([1]))
 # the_text.graph_cycle_of_all_element()
 # the_text.change_k(14)
 # list1 = the_text.all_x_powers_k_multipy_a_cycle([1, 0])
@@ -234,8 +235,6 @@ def all_multipy(a_text):
 
 # all_multipy(the_text)
 # the_text.graph_cycle_of_all_element()
-for i in [5, 7, 11, 13, 17, 19, 20]:
-	the_text = ConsequenceOfFxk([1, 1, 2], 5, i)
-	all_multipy(the_text)
-
-#测试用
+# for i in [31, 41]:
+# 	the_text = ConsequenceOfFxk([1, 1, 3], 7, i)
+# 	all_multipy(the_text)
