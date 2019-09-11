@@ -58,3 +58,4 @@ def all_order1(n):
 
 
 all_order1(342)
+# 工具
