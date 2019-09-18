@@ -1,4 +1,4 @@
-from fundamental_tools.A_new_way_of_P_Field import *
+from A_new_way_of_P_Field import *
 
 
 class FieldError(ValueError):
@@ -578,6 +578,14 @@ class PolynomialsField:
 		elif k == -1:
 			list1.clear()
 			return str(0)
+		
+	def __pow__(self, n):
+		p = self.get_home()
+		func_h = PolynomialsField([1], p)
+		while n > 0:
+			func_h *= self
+			n -= 1
+		return func_h
 	
 	def order(self):
 		n = self._deg
@@ -603,7 +611,8 @@ class PolynomialsField:
 	
 	def get_home(self):
 		return self._home
-		
+
+
 # h1 = [1,1,0,0,0,1,0,1,1]
 # h2 = [1,1,1]
 # h1 = [1,1,1]

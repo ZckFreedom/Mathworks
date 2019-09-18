@@ -1,9 +1,8 @@
-from fundamental_tools.Polynomials_Field import *
+from Polynomials_Field import *
 
 '''
 以1，θ，θ^2等为基，定义了基本运算，以及求逆等运算
 '''
-
 
 
 class Field_q:
@@ -177,6 +176,7 @@ class Field_q:
 		elif k == -1:
 			list1.clear()
 			return str(0)
+	
 		
 		
 # h1 = [1, 0, 0, 1, 1]

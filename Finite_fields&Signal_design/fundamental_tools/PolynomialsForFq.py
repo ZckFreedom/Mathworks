@@ -1,4 +1,4 @@
-from fundamental_tools.A_way_of_q_Field import *
+from A_way_of_q_Field import *
 
 
 class PolynomialsForFq:

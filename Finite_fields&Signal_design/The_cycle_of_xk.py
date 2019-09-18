@@ -195,7 +195,7 @@ class ConsequenceOfFxk:
 		# plt.show()
 		
 
-# the_text = ConsequenceOfFxk([1, 1, 0, 0, 2], 3, 49)
+the_text = ConsequenceOfFxk([1, 1, 0, 0, 2], 3, 49)
 # print(the_text.cycle_of_all_element_and_multipy([1]))
 # the_text.graph_cycle_of_all_element()
 # the_text.change_k(14)
@@ -240,7 +240,7 @@ def all_multipy(a_text):
 
 
 # all_multipy(the_text)
-# the_text.graph_cycle_of_all_element()
+the_text.graph_cycle_of_all_element()
 # for i in [31, 41]:
 # 	the_text = ConsequenceOfFxk([1, 1, 3], 7, i)
 # 	all_multipy(the_text)
