@@ -1,3 +1,6 @@
+from check_out import check_out
+
+
 def get_lexicographic_number_for0(s_sequence):
 	size = len(s_sequence)
 	s_sequence += s_sequence
@@ -30,22 +33,17 @@ def lexicographic_number(s_sequence):
 	return states.index(s_sequence[:size]), len(states)
 
 
-def shift_order(s_sequence):
+def shift_order_first0(s_sequence):
 	size = len(s_sequence)
 	s_sequence += s_sequence
-	cnt = 0
 	
-	states = []
-	real_states = []
+	real_states = Shift_order_space()
 	for i in range(size, -1, -1):
-		if s_sequence[i:i+size] not in states and s_sequence[i] == 0:
-			sequence_number = Shift_order_space(s_sequence[i:i + size], cnt)
-			states.append(s_sequence[i:i + size])
-			real_states.append(sequence_number)
-			cnt += 1
+		if real_states.if_not_in(s_sequence[i:i+size]) and s_sequence[i] == 0:
+			real_states.apend((s_sequence[i:i + size]))
 	
-	real_states.sort(reverse=True)
-	return real_states[-1].get_number(), len(real_states)
+	real_states.select_sort()
+	return real_states.get_number(), real_states.len()
 
 
 def weight_order_alg_A(s_sequence):
@@ -86,7 +84,7 @@ def weigth_order_alg_B(s_sequence):
 	return retval
 
 
-def lexi_order_alg_A(s_sequence, t):
+def lexi_order_alg_A(s_sequence, t_number):
 	state = None
 	retval = []
 	
@@ -95,7 +93,7 @@ def lexi_order_alg_A(s_sequence, t):
 			state = s_sequence[:]
 		
 		k, m = get_lexicographic_number_for0([0] + state[1:])
-		if (m >= t and k == m - t) or (m < t and k == m - 1):
+		if (m >= t_number and k == m - t_number) or (m < t_number and k == m - 1):
 			state = state[1:] + [1 - state[0]]
 		else:
 			state = state[1:] + [state[0]]
@@ -124,24 +122,37 @@ def lexi_order_alg_B(s_sequence):
 
 
 class Shift_order_space:
-	def __init__(self, a_list, shift_number):
-		self._shiftlist = a_list
-		self._shiftnumber = shift_number
-	
-	def get_list(self):
-		return self._shiftlist
+	def __init__(self):
+		self._shiftlist = []
+		self._shiftnumber = 0
 	
 	def get_number(self):
-		return self._shiftnumber
+		return self._shiftlist[-1][1]
 	
-	def __lt__(self, other):
-		return self._shiftlist < other.get_list()
+	def len(self):
+		return len(self._shiftlist)
 	
-	def __eq__(self, other):
-		return self._shiftlist == other.get_list()
+	def apend(self, a_list):
+		self._shiftlist.append((a_list, self._shiftnumber))
+		self._shiftnumber += 1
 	
-	def __gt__(self, other):
-		return self._shiftlist > other.get_list()
+	def if_not_in(self, a_list):
+		if len(self._shiftlist) == 0:
+			return True
+		for i in range(0, len(self._shiftlist)):
+			if self._shiftlist[i][0] == a_list:
+				return False
+		return True
+	
+	def select_sort(self):
+		resort = self._shiftlist
+		for i in range(0, len(resort) - 1):
+			k = i
+			for j in range(i, len(resort)):
+				if resort[i][0] < resort[j][0]:
+					k = j
+			if i != k:
+				resort[i], resort[k] = resort[k], resort[i]
 
 
 def shift_order_alg_A(s_sequence):
@@ -151,7 +162,7 @@ def shift_order_alg_A(s_sequence):
 	while state != s_sequence:
 		if state is None:
 			state = s_sequence[:]
-		k, m = shift_order([0] + state[1:])
+		k, m = shift_order_first0([0] + state[1:])
 		if (m % 2 == 1 and k == 0) or (m % 2 == 0 and k == 1):
 			state = state[1:] + [1 - state[0]]
 		else:
@@ -162,14 +173,41 @@ def shift_order_alg_A(s_sequence):
 	return retval
 
 
-if __name__ == '__main__':
-	algs = [('A', weight_order_alg_A), ('B', weigth_order_alg_B), ('C', lexi_order_alg_B), ('D', shift_order_alg_A)]
+def shift_order_alg_B(s_sequence, t_number):
+	state = None
+	retval = []
+	
+	while state != s_sequence:
+		if state is None:
+			state = s_sequence[:]
+		k, m = shift_order_first0([0] + state[1:])
+		if (k == t_number - 1 and m >= t_number) or (k == 0 and m < t_number):
+			state = state[1:] + [1 - state[0]]
+		else:
+			state = state[1:] + [state[0]]
+		
+		retval.append(state[-1])
+	
+	return retval
 
-	for n in range(3, 8):
+
+if __name__ == '__main__':
+	algs = [('A', weight_order_alg_A), ('B', weigth_order_alg_B), ('C', lexi_order_alg_B),
+	        ('C1', lexi_order_alg_A), ('D', shift_order_alg_A), ('E', shift_order_alg_B)]
+
+	for n in range(5, 12):
 		start = [0] * n
 		for kind, alg in algs:
-			s = ''.join([str(x) for x in alg(start)])
-			s += s
-			idx = s.find('0' * len(start))
-			print(n, kind, s[idx:idx + 2 ** (len(start))])
-
+			if kind == 'E' or kind == 'C1':
+				for t in range(1, n):
+					s = ''.join([str(x) for x in alg(start, t)])
+					s += s
+					idx = s.find('0' * len(start))
+					print(n, t, kind, s[idx:idx + 2 ** (len(start))])
+					check_out(n, s)
+			else:
+				s = ''.join([str(x) for x in alg(start)])
+				s += s
+				idx = s.find('0' * len(start))
+				print(n, kind, s[idx:idx + 2 ** (len(start))])
+				check_out(n, s)

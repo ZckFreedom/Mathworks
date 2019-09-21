@@ -45,29 +45,160 @@ def cycles_of_FSR(ns):
 # 	print(list1[i])
 
 
-def if_final_lexi_min(s_sequence):
-	represent_sequence = s_sequence[1:]
-	size = len(s_sequence)
-	cycle_list = cycles_of_FSR(size)
-	represent_list = []
-	for state in range(0, len(cycle_list)):
-		represent_list.append(cycle_list[state][0][:size-1])
-	
-	if represent_sequence in represent_list:
-		return True
-	else:
-		return False
-
-
 def alg_A(s_sequence):
 	state = None
 	retval = []
+	
+	size = len(s_sequence)
+	cycle_list = cycles_of_FSR(size)
+	represent_list = []
+	for local in range(0, len(cycle_list)):
+		represent_list.append(cycle_list[local][0][:size - 1])
 	
 	while state != s_sequence:
 		if state is None:
 			state = s_sequence[:]
 
-		if if_final_lexi_min(state):
+		if state[1:] in represent_list:
+			state = state[1:] + [1 - ((state[0] + state[1] + state[-1]) % 2)]
+		else:
+			state = state[1:] + [(state[0] + state[1] + state[-1]) % 2]
+		
+		retval.append(state[-1])
+	
+	return retval
+
+
+def lexi_judge(s_sequence, necklace_list):
+	if s_sequence[0] == s_sequence[-1]:
+		if (s_sequence[1:] + [1]) in necklace_list:
+			return True
+		elif (s_sequence[1:] + [0]) in necklace_list:
+			return True
+		else:
+			return False
+			
+	elif s_sequence[0] != s_sequence[-1]:
+		if (s_sequence[1:] + [0]) in necklace_list:
+			return True
+		elif (s_sequence[1:] + [1]) in necklace_list:
+			return True
+		else:
+			return False
+
+
+def alg_B(s_sequence):
+	state = None
+	retval = []
+	
+	size = len(s_sequence)
+	cycle_list = cycles_of_FSR(size)
+	represent_list = []
+	for local in range(0, len(cycle_list)):
+		represent_list.append(cycle_list[local][0])
+		
+	while state != s_sequence:
+		if state is None:
+			state = s_sequence[:]
+		
+		if lexi_judge(state, represent_list):
+			state = state[1:] + [1 - ((state[0] + state[1] + state[-1]) % 2)]
+		else:
+			state = state[1:] + [(state[0] + state[1] + state[-1]) % 2]
+		
+		retval.append(state[-1])
+	
+	return retval
+
+
+def alg_C(s_sequence):
+	state = None
+	retval = []
+	
+	size = len(s_sequence)
+	cycles_list = cycles_of_FSR(size)
+	necklace_list = []
+	for local in range(0, len(cycles_list)):
+		necklace_list.append(cycles_list[local][0])
+	
+	while state != s_sequence:
+		if state is None:
+			state = s_sequence[:]
+		
+		if state[0] == state[-1] and state[1:] + [1 - state[0]] in necklace_list:
+			state = state[1:] + [1 - ((state[0] + state[1] + state[-1]) % 2)]
+		elif state[0] != state[-1] and state[1:] + [state[0]] in necklace_list:
+			state = state[1:] + [1 - ((state[0] + state[1] + state[-1]) % 2)]
+		elif state[0] == 0 and state.count(1) == size - 1:
+			state = state[1:] + [1 - ((state[0] + state[1] + state[-1]) % 2)]
+		elif state.count(1) == size:
+			state = state[1:] + [1 - ((state[0] + state[1] + state[-1]) % 2)]
+		else:
+			state = state[1:] + [(state[0] + state[1] + state[-1]) % 2]
+		
+		retval.append(state[-1])
+	
+	return retval
+
+
+def alg_D(s_sequence):
+	state = None
+	retval = []
+	
+	size = len(s_sequence)
+	cycle_list = cycles_of_FSR(size)
+	necklace_list = []
+	for local in range(0, len(cycle_list)):
+		if cycle_list[local][0][0] == cycle_list[local][0][-1]:
+			necklace_list.append(cycle_list[local][0][:size - 1])
+		else:
+			necklace_list.append([1 - x for x in cycle_list[local][0][:size - 1]])
+	
+	while state != s_sequence:
+		if state is None:
+			state = s_sequence[:]
+		
+		if state[1:] in necklace_list:
+			state = state[1:] + [1 - ((state[0] + state[1] + state[-1]) % 2)]
+		else:
+			state = state[1:] + [(state[0] + state[1] + state[-1]) % 2]
+		
+		retval.append(state[-1])
+	
+	return retval
+
+
+def get_representlist(cycle_list):
+	size = len(cycle_list[0][0])
+	necklace_list = []
+	lexi_list = []
+	for local in range(0, len(cycle_list)):
+		if cycle_list[local][0][0] == cycle_list[local][0][-1]:
+			necklace_list.append(cycle_list[local][0][:size - 1])
+		else:
+			cycle_length = len(cycle_list[local])
+			reval = [x[-1] for x in cycle_list[local]]
+			reval += reval
+			for i in range(0, cycle_length):
+				lexi_list.append(reval[i: i + cycle_length])
+			lexi_list.sort(reverse=True)
+			necklace_list.append(lexi_list[0][: size - 1])
+			lexi_list.clear()
+	return necklace_list
+
+
+def alg_E(s_sequence):
+	state = None
+	retval = []
+	
+	size = len(s_sequence)
+	necklace_list = get_representlist(cycles_of_FSR(size))
+	
+	while state != s_sequence:
+		if state is None:
+			state = s_sequence[:]
+		
+		if state[1:] in necklace_list:
 			state = state[1:] + [1 - ((state[0] + state[1] + state[-1]) % 2)]
 		else:
 			state = state[1:] + [(state[0] + state[1] + state[-1]) % 2]
@@ -78,7 +209,7 @@ def alg_A(s_sequence):
 
 
 if __name__ == '__main__':
-	algs = [('A', alg_A)]
+	algs = [('A', alg_A), ('B', alg_B), ('C', alg_C), ('D', alg_D), ('E', alg_E)]
 
 	for n in [5, 9]:
 		start = [0] * n

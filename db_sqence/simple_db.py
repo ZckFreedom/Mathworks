@@ -63,7 +63,7 @@ def algorithm_B(s_sequence, t_number):
 if __name__ == '__main__':
 	algs = [('A', algorithm_A), ('B', algorithm_B)]
 	
-	for n in range(9, 11):
+	for n in range(5, 6):
 		start = [0] * n
 		for t in range(1, n):
 			for kind, alg in algs:
