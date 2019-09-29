@@ -8,7 +8,7 @@ def check_out(ns, s_sequsence):
 			print(se)
 			print('it is not a dB_sequence!')
 			return
-	print('Congratulation,this is a dB-sequence for {}!'.format(ns))
+	# print('Congratulation,this is a dB-sequence for {}!'.format(ns))
 
 
 # if __name__ == '__main__':

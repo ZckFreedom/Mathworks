@@ -1,4 +1,6 @@
 import Polynomials_Field
+import time
+from randomness_measurements import games_chan
 
 
 def generator_of_all_sequnces(sequence_order):
@@ -40,12 +42,32 @@ def cycles_of_FSR(ns):
 	return cycle_list
 
 
-# list1 = cycles_of_FSR(5)
+def cycles_of_FSR_for6(ns):
+	cycle_list = []
+	middle_list = []
+	mark_number = 0
+	for s_sequence in generator_of_all_sequnces(ns):
+		for mark in range(0, len(cycle_list)):
+			if s_sequence in cycle_list[mark]:
+				mark_number = 1
+		if mark_number == 0:
+			middle_list.append(s_sequence.copy())
+			state = s_sequence[1:] + [1 - s_sequence[0]]
+			while state != s_sequence:
+				middle_list.append(state)
+				state = state[1:] + [1 - state[0]]
+			cycle_list.append(middle_list.copy())
+			middle_list.clear()
+		mark_number = 0
+	return cycle_list
+
+
+# list1 = cycles_of_FSR_for6(6)
 # for i in range(0, len(list1)):
 # 	print(list1[i])
 
 
-def alg_A(s_sequence):
+def alg_common_A(s_sequence):
 	state = None
 	retval = []
 	
@@ -87,7 +109,7 @@ def lexi_judge(s_sequence, necklace_list):
 			return False
 
 
-def alg_B(s_sequence):
+def alg_common_A1(s_sequence):
 	state = None
 	retval = []
 	
@@ -111,7 +133,7 @@ def alg_B(s_sequence):
 	return retval
 
 
-def alg_C(s_sequence):
+def alg_common_A2(s_sequence):
 	state = None
 	retval = []
 	
@@ -141,7 +163,56 @@ def alg_C(s_sequence):
 	return retval
 
 
-def alg_D(s_sequence):
+def alg_common_B(s_sequence):
+	state = None
+	retval = []
+	
+	size = len(s_sequence)
+	cycle_list = cycles_of_FSR(size)
+	represent_list = []
+	for local in range(0, len(cycle_list)):
+		cycle_list[local].sort(reverse=True)
+		represent_list.append(cycle_list[local][0][:size - 1])
+	
+	while state != s_sequence:
+		if state is None:
+			state = s_sequence[:]
+		
+		if state[1:] in represent_list:
+			state = state[1:] + [1 - ((state[0] + state[1] + state[-1]) % 2)]
+		else:
+			state = state[1:] + [(state[0] + state[1] + state[-1]) % 2]
+		
+		retval.append(state[-1])
+	
+	return retval
+
+
+def alg_common_B1(s_sequence):
+	state = None
+	retval = []
+	
+	size = len(s_sequence)
+	cycle_list = cycles_of_FSR(size)
+	represent_list = []
+	for local in range(0, len(cycle_list)):
+		represent_list.append([1 - x for x in cycle_list[local][0][:size - 1]])
+	
+	while state != s_sequence:
+		if state is None:
+			state = s_sequence[:]
+		
+		if state[1:] in represent_list:
+			state = state[1:] + [1 - ((state[0] + state[1] + state[-1]) % 2)]
+		else:
+			state = state[1:] + [(state[0] + state[1] + state[-1]) % 2]
+		
+		retval.append(state[-1])
+	
+	return retval
+
+
+def alg_common_C(s_sequence):
 	state = None
 	retval = []
 	
@@ -187,7 +258,7 @@ def get_representlist(cycle_list):
 	return necklace_list
 
 
-def alg_E(s_sequence):
+def alg_common_C1(s_sequence):
 	state = None
 	retval = []
 	
@@ -208,14 +279,47 @@ def alg_E(s_sequence):
 	return retval
 
 
-if __name__ == '__main__':
-	algs = [('A', alg_A), ('B', alg_B), ('C', alg_C), ('D', alg_D), ('E', alg_E)]
+def alg_A_for6(s_sequence):
+	state = None
+	retval = []
+	
+	size = len(s_sequence)
+	cycle_list = cycles_of_FSR_for6(size)
+	represent_list = []
+	for local in range(0, len(cycle_list)):
+		represent_list.append(cycle_list[local][0][:size - 1])
+	
+	while state != s_sequence:
+		if state is None:
+			state = s_sequence[:]
+		
+		if state[1:] in represent_list:
+			state = state[1:] + [1 - ((state[0] + state[2] + state[-2]) % 2)]
+		else:
+			state = state[1:] + [(state[0] + state[2] + state[-2]) % 2]
+		
+		retval.append(state[-1])
+	
+	return retval
 
-	for n in [5, 9]:
+
+if __name__ == '__main__':
+	algs = [('A', alg_common_A), ('A1', alg_common_A1), ('A2', alg_common_A2), ('B', alg_common_B),
+	        ('B1', alg_common_B1), ('C', alg_common_C), ('C1', alg_common_C1)]
+
+	for n in range(5, 16):
+		start_time = time.perf_counter()
 		start = [0] * n
 		for kind, alg in algs:
-			s = ''.join([str(x) for x in alg(start)])
-			s += s
-			idx = s.find('0' * len(start))
-			print(n, kind, s[idx:idx + 2 ** (len(start))])
-			print(len(s))
+			if kind == 'C':
+				s = ''.join([str(x) for x in alg(start)])
+				s += s
+				idx = s.find('0' * len(start))
+				if len(kind) == 1:
+					space_number = 1
+				else:
+					space_number = 0
+				print(n, kind, ' '*space_number, s[idx:idx + 2 ** (len(start))])
+				print(2 ** n)
+				print(games_chan(s))
+				# print(time.perf_counter() - start_time, "seconds")

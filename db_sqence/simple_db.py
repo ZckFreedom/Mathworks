@@ -3,23 +3,23 @@ import time
 start_time = time.perf_counter()
 
 
-def get_lexicographic_number(s_sqeuence):
+def get_lexicographic_number(s_sequence):
 	"""
 	给定一个序列s，先得到序列的长度，并让序列循环两次
 	之后取得序列的包含的所有最后一位是1的状态
 	将状态按照字典序排列
 	最后得到原序列在状态表中的位置和该循环序列包含的最后一位是1的状态个数
 	"""
-	size = len(s_sqeuence)
-	s_sqeuence += s_sqeuence
+	size = len(s_sequence)
+	s_sequence += s_sequence
 	
 	states = []
 	for i in range(size):
-		if s_sqeuence[i:i + size] not in states and s_sqeuence[i + size - 1] == 1:
-			states.append(s_sqeuence[i:i + size])
+		if s_sequence[i:i + size] not in states and s_sequence[i + size - 1] == 1:
+			states.append(s_sequence[i:i + size])
 	
 	states.sort(reverse=True)
-	return states.index(s_sqeuence[:size]), len(states)
+	return states.index(s_sequence[:size]), len(states)
 
 
 def algorithm_A(s_sequence, t_number):
