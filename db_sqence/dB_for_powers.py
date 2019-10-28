@@ -62,9 +62,13 @@ def cycles_of_FSR_for6(ns):
 	return cycle_list
 
 
-# list1 = cycles_of_FSR_for6(6)
+# list1 = cycles_of_FSR(8)
+# cnt = 0
 # for i in range(0, len(list1)):
 # 	print(list1[i])
+# 	if list1[i][0][0] != list1[i][0][-1]:
+# 		cnt += 1
+# print(cnt)
 
 
 def alg_common_A(s_sequence):
@@ -279,6 +283,52 @@ def alg_common_C1(s_sequence):
 	return retval
 
 
+def judge(sequence):
+	state = sequence[:]
+	size = len(state)
+	states = []
+	if state == [0] * size or state == [1] * size:
+		return 0, 1
+	
+	elif state[0] == state[size - 1]:
+		state = state[1:] + [1 - state[1]]
+		sequence = state[:]
+		sequence += [1 - x for x in state[1:size - 1]]
+		sequence += state[:size - 1]
+		for i in range(2 * size - 1):
+			states.append(sequence[i:i + size])
+		
+		states.sort()
+		return states.index(state), len(states)
+	else:
+		state = state[1:] + [state[1]]
+		state += state[1:size - 1]
+		for i in range(size - 1):
+			states.append(state[i:i + size])
+		
+		states.sort(reverse=True)
+		return states.index(state[:size]), len(states)
+
+
+def alg_common_CS(s_sequence):
+	state = None
+	retval = []
+	
+	while state != s_sequence:
+		if state is None:
+			state = s_sequence[:]
+		
+		k, m = judge(state)
+		if k == m - 1:
+			state = state[1:] + [1 - ((state[0] + state[1] + state[-1]) % 2)]
+		else:
+			state = state[1:] + [(state[0] + state[1] + state[-1]) % 2]
+		
+		retval.append(state[-1])
+	
+	return retval
+
+
 def alg_A_for6(s_sequence):
 	state = None
 	retval = []
@@ -303,23 +353,24 @@ def alg_A_for6(s_sequence):
 	return retval
 
 
-if __name__ == '__main__':
-	algs = [('A', alg_common_A), ('A1', alg_common_A1), ('A2', alg_common_A2), ('B', alg_common_B),
-	        ('B1', alg_common_B1), ('C', alg_common_C), ('C1', alg_common_C1)]
-
-	for n in range(5, 16):
-		start_time = time.perf_counter()
-		start = [0] * n
-		for kind, alg in algs:
-			if kind == 'C':
-				s = ''.join([str(x) for x in alg(start)])
-				s += s
-				idx = s.find('0' * len(start))
-				if len(kind) == 1:
-					space_number = 1
-				else:
-					space_number = 0
-				print(n, kind, ' '*space_number, s[idx:idx + 2 ** (len(start))])
-				print(2 ** n)
-				print(games_chan(s))
-				# print(time.perf_counter() - start_time, "seconds")
+# if __name__ == '__main__':
+# 	algs = [('A', alg_common_A), ('A1', alg_common_A1), ('A2', alg_common_A2), ('B', alg_common_B),
+# 	        ('B1', alg_common_B1), ('C', alg_common_C), ('C1', alg_common_C1)]
+#
+# 	for n in range(5, 6):
+# 		start_time = time.perf_counter()
+# 		start = [0] * n
+# 		for kind, alg in algs:
+# 			if kind == 'C' or kind == 'C1':
+# 				s = ''.join([str(x) for x in alg(start)])
+# 				s += s
+# 				idx = s.find('0' * len(start))
+# 				if len(kind) == 1:
+# 					space_number = 1
+# 				else:
+# 					space_number = 0
+# 				print(n, kind, ' '*space_number, s[idx:idx + 2 ** (len(start))])
+# 				print(len(s))
+# 				# print(2 ** n)
+# 				# print(games_chan(s))
+# 				# print(time.perf_counter() - start_time, "seconds")

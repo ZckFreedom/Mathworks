@@ -1,13 +1,22 @@
-from dB_for_powers import *
+def generator_of_all_sequnces(sequence_order):
+	cnt = 0
+	sequence = [0] * sequence_order
+	while cnt < 2**sequence_order:
+		for bit in range(0, sequence_order):
+			a = cnt // (2 ** (sequence_order - 1 - bit))
+			sequence[bit] = a % 2
+		cnt += 1
+		yield sequence
 
 
 def check_out(ns, s_sequsence):
 	for state in generator_of_all_sequnces(ns):
 		se = ''.join([str(x) for x in state])
 		if s_sequsence.find(se) == -1:
-			print(se)
-			print('it is not a dB_sequence!')
-			return
+			# print(se)
+			# print('it is not a dB_sequence!')
+			return 0
+	return 1
 	# print('Congratulation,this is a dB-sequence for {}!'.format(ns))
 
 

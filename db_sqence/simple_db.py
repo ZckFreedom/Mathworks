@@ -126,14 +126,36 @@ def algorithm_C(s_sequence, t_number):
 	return retval
 
 
-if __name__ == '__main__':
-	algs = [('A', algorithm_A), ('B', algorithm_B), ('C', algorithm_C)]
+def lexi_order_alg_B(s_sequence):
+	state = None
+	retval = []
 	
-	for n in range(5, 6):
+	while state != s_sequence:
+		if state is None:
+			state = s_sequence[:]
+		
+		k, m = get_lexicographic_number(state[1:] + [1])
+		if (m % 2 == 1 and k == m - 1) or (m % 2 == 0 and k == m - 2):
+			state = state[1:] + [1 - state[0]]
+		else:
+			state = state[1:] + [state[0]]
+		
+		retval.append(state[-1])
+	
+	return retval
+
+
+if __name__ == '__main__':
+	algs = [('B1', algorithm_B), ('B2', algorithm_A), ('B3', lexi_order_alg_B), ('D2', algorithm_C)]
+	
+	for n in range(5, 10):
 		start = [0] * n
 		for t in range(1, n):
 			for kind, alg in algs:
-				s = ''.join([str(x) for x in alg(start, t)])
+				if kind == 'B3':
+					s = ''.join([str(x) for x in alg(start)])
+				else:
+					s = ''.join([str(x) for x in alg(start, t)])
 				s += s
 				idx = s.find('0' * len(start))
 				print(n, t, kind, s[idx:idx + 2 ** (len(start))])

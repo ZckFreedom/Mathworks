@@ -189,7 +189,7 @@ class Shift_order_space:
 		for i in range(0, len(resort) - 1):
 			k = i
 			for j in range(i, len(resort)):
-				if resort[i][0] < resort[j][0]:
+				if resort[k][0] < resort[j][0]:
 					k = j
 			if i != k:
 				resort[i], resort[k] = resort[k], resort[i]
@@ -291,33 +291,46 @@ def shift_order_alg_new_B(s_sequence, t_number):
 
 
 if __name__ == '__main__':
-	algs = [('A', weight_order_alg_A), ('B', weigth_order_alg_B), ('C', lexi_order_alg_B),
+	algs = [('C', lexi_order_alg_B),
 	        ('C1', lexi_order_alg_A), ('D', shift_order_alg_A), ('E', shift_order_alg_B),
-	        ('G1', shift_order_alg_new_A), ('G2', shift_order_alg_new_B), ('G11', shift_order_alg_new_A_right)]
+	        ('G1', shift_order_alg_new_A), ('G2', shift_order_alg_new_B)]
 	
-	class1 = ['G1', 'G2', 'G11']
+	class1 = ['G1', 'G2']
 	class2 = ['C1', 'E']
+	sequence_list = []
 
 	for n in range(6, 7):
 		start = [0] * n
 		for kind, alg in algs:
 			if kind in class1:
-				for t in range(0, n):
+				cnt = 0
+				for t in range(0, 60):
 					s = ''.join([str(x) for x in alg(start, t)])
 					s += s
 					idx = s.find('0' * len(start))
+					# if s[idx:idx + 2 ** (len(start))] not in sequence_list:
+					# 	sequence_list.append(s[idx:idx + 2 ** (len(start))])
+					# else:
 					print(n, t, kind, s[idx:idx + 2 ** (len(start))])
+				# 		cnt += 1
+				# print(cnt)
 					check_out(n, s)
-			elif kind in class2:
+			elif kind == 'E':
 				for t in range(1, n):
 					s = ''.join([str(x) for x in alg(start, t)])
 					s += s
 					idx = s.find('0' * len(start))
+					# if s[idx:idx + 2 ** (len(start))] not in sequence_list:
+					# 	sequence_list.append(s[idx:idx + 2 ** (len(start))])
+					# else:
 					print(n, t, kind, s[idx:idx + 2 ** (len(start))])
 					check_out(n, s)
-			else:
+			elif kind == 'D':
 				s = ''.join([str(x) for x in alg(start)])
 				s += s
 				idx = s.find('0' * len(start))
+				# if s[idx:idx + 2 ** (len(start))] not in sequence_list:
+				# 	sequence_list.append(s[idx:idx + 2 ** (len(start))])
+				# else:
 				print(n, kind, s[idx:idx + 2 ** (len(start))])
 				check_out(n, s)
