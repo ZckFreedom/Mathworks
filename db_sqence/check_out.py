@@ -1,4 +1,4 @@
-def generator_of_all_sequnces(sequence_order):
+def generator_of_all_sequences(sequence_order):
 	cnt = 0
 	sequence = [0] * sequence_order
 	while cnt < 2**sequence_order:
@@ -9,10 +9,10 @@ def generator_of_all_sequnces(sequence_order):
 		yield sequence
 
 
-def check_out(ns, s_sequsence):
-	for state in generator_of_all_sequnces(ns):
+def check_out(ns, s_sequence):
+	for state in generator_of_all_sequences(ns):
 		se = ''.join([str(x) for x in state])
-		if s_sequsence.find(se) == -1:
+		if s_sequence.find(se) == -1:
 			# print(se)
 			# print('it is not a dB_sequence!')
 			return 0

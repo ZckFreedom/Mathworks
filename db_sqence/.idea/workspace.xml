@@ -2,16 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53e36b27-bdc8-485a-95de-2d125a3d965a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/123.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P-CCR_dB.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools/cui_work.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PCR_dB.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k_ary_dB.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new_way_PCR.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new_way_PSR.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools/A_way_of_q_Field.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools/A_way_of_q_Field.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools/PolynomialsForFq.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools/PolynomialsForFq.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P-CCR_dB.py" beforeDir="false" afterPath="$PROJECT_DIR$/P-CCR_dB.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PSR_dB.py" beforeDir="false" afterPath="$PROJECT_DIR$/PSR_dB.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/check_out.py" beforeDir="false" afterPath="$PROJECT_DIR$/check_out.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dB_for_powers.py" beforeDir="false" afterPath="$PROJECT_DIR$/dB_for_powers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/easy_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/easy_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/simple_db.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,55 +20,93 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/db_sqence$PolynomialsForFq.coverage" NAME="PolynomialsForFq Coverage Results" MODIFIED="1574763615221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools" />
+    <SUITE FILE_PATH="coverage/db_sqence$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1572263458869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
+    <SUITE FILE_PATH="coverage/db_sqence$PSR_dB.coverage" NAME="PSR_dB Coverage Results" MODIFIED="1573722242970" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/db_sqence$cui_work.coverage" NAME="cui_work Coverage Results" MODIFIED="1574860362548" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools" />
+    <SUITE FILE_PATH="coverage/db_sqence$new_way_PSR.coverage" NAME="new_way_PSR Coverage Results" MODIFIED="1573722363031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/db_sqence$k_ary_dB.coverage" NAME="k_ary_dB Coverage Results" MODIFIED="1574234017904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/db_sqence$P_CCR_dB.coverage" NAME="P-CCR_dB Coverage Results" MODIFIED="1574834274415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/db_sqence$new_way_PCR.coverage" NAME="new_way_PCR Coverage Results" MODIFIED="1573718743388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/db_sqence$PCR_dB.coverage" NAME="PCR_dB Coverage Results" MODIFIED="1573714401766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/db_sqence$A_way_of_q_Field.coverage" NAME="A_way_of_q_Field Coverage Results" MODIFIED="1574763254215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-382614347">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
-          <entry key="project.open.time.26" value="2" />
-          <entry key="project.open.time.27" value="1" />
+          <entry key="project.closed" value="14" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.26" value="3" />
+          <entry key="project.open.time.27" value="2" />
+          <entry key="project.open.time.28" value="1" />
+          <entry key="project.open.time.30" value="2" />
+          <entry key="project.open.time.31" value="2" />
+          <entry key="project.open.time.33" value="2" />
+          <entry key="project.open.time.35" value="1" />
+          <entry key="project.open.time.36" value="1" />
+          <entry key="project.open.time.37" value="1" />
+          <entry key="project.open.time.40" value="2" />
+          <entry key="project.open.time.41" value="1" />
+          <entry key="project.open.time.59" value="2" />
+          <entry key="project.open.time.62" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="12" />
+          <entry key="py" value="9975" />
+          <entry key="txt" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="12" />
+          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="Python" value="9975" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="3" />
+          <entry key="py" value="75" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="3" />
+          <entry key="Python" value="75" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/P-CCR_dB.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="165" column="59" lean-forward="true" selection-start-line="134" selection-end-line="165" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/123.py">
+        <entry file="file://$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools/cui_work.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="74" selection-start-line="74" selection-end-line="74" />
+            <state relative-caret-position="392">
+              <caret line="70" column="18" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+                <marker date="1574860362491" expanded="true" signature="114:116" ph="..." />
+                <marker date="1574860362491" expanded="true" signature="426:2131" ph="..." />
+                <marker date="1574860362491" expanded="true" signature="1291:2131" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -81,14 +120,29 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>is not</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/PSR_dB.py" />
         <option value="$PROJECT_DIR$/123.py" />
+        <option value="$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools/Polynomials_Field.py" />
+        <option value="$PROJECT_DIR$/PCR_dB.py" />
+        <option value="$PROJECT_DIR$/new_way_PCR.py" />
+        <option value="$PROJECT_DIR$/PSR_dB.py" />
+        <option value="$PROJECT_DIR$/new_way_PSR.py" />
+        <option value="$PROJECT_DIR$/check_out.py" />
+        <option value="$PROJECT_DIR$/k_ary_dB.py" />
+        <option value="$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools/PolynomialsForFq.py" />
+        <option value="$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools/A_way_of_q_Field.py" />
+        <option value="$PROJECT_DIR$/P-CCR_dB.py" />
+        <option value="$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools/cui_work.py" />
       </list>
     </option>
   </component>
@@ -98,7 +152,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
@@ -124,7 +178,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -135,20 +188,21 @@
             <path>
               <item name="db_sqence" type="b2602c69:ProjectViewProjectNode" />
               <item name="db_sqence" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="db_sqence" type="462c0819:PsiDirectoryNode" />
+              <item name="fundamental_tools" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/Python34/python.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -162,6 +216,157 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Python.cui_work">
+    <configuration name="A_way_of_q_Field" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="db_sqence" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools/A_way_of_q_Field.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="P-CCR_dB" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="db_sqence" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/P-CCR_dB.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PolynomialsForFq" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="db_sqence" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools/PolynomialsForFq.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python">
+      <module name="db_sqence" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Python3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="cui_work" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="db_sqence" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools/cui_work.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="k_ary_dB" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="db_sqence" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/k_ary_dB.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.Unnamed" />
+      <item itemvalue="Python.P-CCR_dB" />
+      <item itemvalue="Python.k_ary_dB" />
+      <item itemvalue="Python.cui_work" />
+      <item itemvalue="Python.A_way_of_q_Field" />
+      <item itemvalue="Python.PolynomialsForFq" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.cui_work" />
+        <item itemvalue="Python.P-CCR_dB" />
+        <item itemvalue="Python.PolynomialsForFq" />
+        <item itemvalue="Python.A_way_of_q_Field" />
+        <item itemvalue="Python.k_ary_dB" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -173,18 +378,27 @@
       <option name="presentableId" value="Default" />
       <updated>1572006293255</updated>
     </task>
+    <task id="LOCAL-00001" summary="dB序列">
+      <created>1572263191798</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1572263191798</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25718608" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18003026" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" x="0" y="23" width="1366" height="745" id="Run" order="2" type="WINDOWED" weight="0.32973805" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.40215716" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -193,13 +407,36 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" x="0" y="23" width="1366" height="745" id="Python Console" order="12" type="WINDOWED" weight="0.32973805" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32980332" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32980332" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1732224" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" x="0" y="23" width="1366" height="745" id="Run" order="2" type="WINDOWED" weight="0.32973805" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3990755" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" x="0" y="23" width="1366" height="745" id="Python Console" order="12" type="WINDOWED" weight="0.32973805" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32980332" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32980332" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -207,30 +444,195 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="dB序列" />
+    <option name="LAST_COMMIT_MESSAGE" value="dB序列" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/new_way_PSR.py</url>
+          <line>254</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="a" />
+      </configuration>
+    </watches-manager>
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/123.py" />
+    <entry file="file://$PROJECT_DIR$/dB_for_powers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="41" column="21" lean-forward="true" selection-start-line="25" selection-start-column="4" selection-end-line="41" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PCR_dB.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5408" />
+        <state relative-caret-position="439">
+          <caret line="79" column="90" selection-start-line="79" selection-start-column="71" selection-end-line="79" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/check_out.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" selection-start-line="11" selection-end-line="18" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/k_ary_dB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python3/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="311" selection-start-line="311" selection-end-line="311" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="21" column="55" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_mission.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1692" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/easy_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PSR_dB.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="276" column="89" selection-start-line="276" selection-start-column="89" selection-end-line="276" selection-end-column="89" />
+        <state relative-caret-position="299">
+          <caret line="94" column="44" lean-forward="true" selection-start-line="92" selection-start-column="8" selection-end-line="94" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools/PolynomialsForFq.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="196" column="12" lean-forward="true" selection-start-line="196" selection-start-column="12" selection-end-line="196" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools/A_way_of_q_Field.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="79" column="18" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
+          <folding>
+            <element signature="e#119#819#0" />
+            <element signature="e#852#1191#0" />
+            <element signature="e#1223#1562#0" />
+            <element signature="e#1594#1933#0" />
+            <element signature="e#1964#2075#0" />
+            <element signature="e#2103#2234#0" />
+            <element signature="e#2255#2496#0" />
+            <element signature="e#2520#2671#0" />
+            <element signature="e#2928#3140#0" />
+            <element signature="e#3165#4211#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools/A_new_way_of_P_Field.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-123">
+          <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools/Polynomials_Field.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="335" column="40" selection-start-line="333" selection-start-column="12" selection-end-line="335" selection-end-column="40" />
+          <folding>
+            <element signature="e#12938#13915#0" />
+            <element signature="e#13944#14058#0" />
+            <element signature="e#14081#14357#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_way_PSR.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="280" column="59" selection-start-line="280" selection-start-column="29" selection-end-line="280" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_way_PCR.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1242">
+          <caret line="102" column="16" lean-forward="true" selection-start-line="102" selection-start-column="16" selection-end-line="102" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/P-CCR_dB.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="165" column="59" lean-forward="true" selection-start-line="134" selection-end-line="165" selection-end-column="59" />
+        <state relative-caret-position="308">
+          <caret line="259" column="24" selection-start-line="259" selection-start-column="24" selection-end-line="259" selection-end-column="24" />
+          <folding>
+            <element signature="e#869#1137#0" />
+            <element signature="e#1172#1770#0" />
+            <element signature="e#1805#2326#0" />
+            <element signature="e#2361#2909#0" />
+            <element signature="e#2941#3268#0" />
+            <element signature="e#3298#4164#0" />
+            <element signature="e#3392#3421#0" />
+            <element signature="e#4197#4494#0" />
+            <element signature="e#4533#4876#0" />
+            <element signature="e#4912#5576#0" />
+            <element signature="e#6320#6976#0" />
+            <element signature="e#6322#6862#0" />
+            <element signature="e#6900#7521#0" />
+            <element signature="e#7559#8281#0" />
+            <element signature="e#8319#8937#0" />
+            <marker date="1574834274328" expanded="true" signature="2939:3272" ph="..." />
+            <marker date="1574834274328" expanded="true" signature="3805:3924" ph="..." />
+            <marker date="1574834274328" expanded="true" signature="4531:4879" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/123.py">
+    <entry file="file://$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools/cui_work.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
+        <state relative-caret-position="392">
+          <caret line="70" column="18" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <marker date="1574860362491" expanded="true" signature="114:116" ph="..." />
+            <marker date="1574860362491" expanded="true" signature="426:2131" ph="..." />
+            <marker date="1574860362491" expanded="true" signature="1291:2131" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
