@@ -187,22 +187,33 @@ def the_minimal(a_element):
 	p = a_element.get_character()
 	list1 = [a_element]
 	conjugate = a_element ** p
-	cnt = 0
 	e = PolynomialsForFq([1], a_element.get_mother())
 	zero = Field_q(0, a_element.get_mother())
-	while cnt == 0:
-		if conjugate == a_element:
-			cnt = 1
-		else:
-			list1.append(conjugate)
-			conjugate = conjugate ** p
+	while conjugate != a_element:
+		list1.append(conjugate)
+		conjugate = conjugate ** p
 	for i in range(0, len(list1)):
 		e = e * PolynomialsForFq([1, zero-list1[i]], a_element.get_mother())
 	return e
 
-#
-# h1 = [1, 0, 0, 0, 0, 1, 1]
-# h2 = [1, 1, 0, 0, 0]
+
+def all_elements(a_ply):
+	p = a_ply.get_home()
+	n = a_ply.get_deg()
+	q = p ** n
+	cnt = 0
+	while cnt < q:
+		list1 = [0] * n
+		for j in range(n):
+			a_number = cnt // (p ** (n - 1 - j))
+			list1[j] = a_number
+		cnt += 1
+		print(Field_q(list1, a_ply))
+		
+
+# h1 = [1, 0, 0, 1, 1]
+# h2 = [1, 1]
 # g1 = PolynomialsField(h1, 2)
 # a = Field_q(h2, g1)
 # print(the_minimal(a))
+# all_elements(g1)

@@ -138,13 +138,13 @@ class Field_q:
 				str1 += 'θ'
 				k -= 1
 			elif a != ids and k == 1:
-				str1 += a + '*θ'
+				str1 += str(a) + '*θ'
 				k -= 1
 			elif a == ids and k != 1:
 				str1 += 'θ^' + str(k)
 				k -= 1
 			else:
-				str1 += a + 'θ^' + str(k)
+				str1 += str(a) + 'θ^' + str(k)
 				k -= 1
 			while k > 0:
 				a = list1.pop(0)
@@ -176,8 +176,7 @@ class Field_q:
 		elif k == -1:
 			list1.clear()
 			return str(0)
-	
-		
+
 		
 # h1 = [1, 0, 0, 1, 1]
 # h2 = [1, 0]
@@ -193,5 +192,5 @@ class Field_q:
 # 	for t in range(0, len(sequence_a)):
 # 		g += sequence_a[t] * f**(t*k)
 # 	print(g)
-	
+#
 # print(f)
