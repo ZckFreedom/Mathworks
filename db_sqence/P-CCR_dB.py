@@ -59,6 +59,18 @@ def find_rconk(s_sequence):
 	return states[-1]
 
 
+def find_first_zero(s_sequence):
+	size = len(s_sequence) - 1
+	state = s_sequence[:size]
+	for i in range(0, size):
+		state.append(1-state[i])
+	state += state
+	
+	for i in range(1, 2*size):
+		if state[i] == 0:
+			return state[i:i+size+1]
+
+
 def alg_nkorenk_A(s_sequence):
 	state = None
 	retval = []
@@ -415,9 +427,35 @@ def alg_shift_orderD(s_sequence):
 	return retval
 
 
+def alg_shift_orderE(s_sequence):
+	state = None
+	retval = []
+	
+	while state != s_sequence:
+		if state is None:
+			state = s_sequence[:]
+		
+		answer = None
+		if state[-1] == 1:
+			next_state = [0] + state[1:]
+			answer = (find_conk(next_state) == find_first_zero(next_state))
+		elif state[-1] == 0:
+			local, lens = shift_order([0] + state[1:])
+			answer = (lens >= 2 and local == lens - 1) or (lens < 2 and local == 0)
+		
+		if answer is True:
+			state = state[1:] + [1 - ((state[0] + state[1] + state[-1]) % 2)]
+		else:
+			state = state[1:] + [(state[0] + state[1] + state[-1]) % 2]
+		
+		retval.append(state[-1])
+	
+	return retval
+
+
 for n in range(6, 7):
 	start = [0] * n
-	s = ''.join([str(x) for x in alg_nkorrnk_D2(start)])
+	s = ''.join([str(x) for x in alg_shift_orderE(start)])
 	s += s
 	idx = s.find('0' * len(start))
 	print(s[idx:idx + 2 ** (len(start))])
