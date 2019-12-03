@@ -7,7 +7,7 @@ sequence_a = [0, 1]
 
 
 def cycles(n):
-	all_sequence = []
+	# all_sequence = []
 	# all_cyeles = []
 	# middle_cycle = []
 	reveal = []
