@@ -61,6 +61,26 @@ def pcr_cycles(k, n):
 	return cycle_list
 
 
+def ccr_cycles(k, n):
+	cycle_list = []
+	middle_list = []
+	mark_number = 0
+	for s_sequence in generator_of_all_sequences(k, n):
+		for mark in range(0, len(cycle_list)):
+			if s_sequence in cycle_list[mark]:
+				mark_number = 1
+		if mark_number == 0:
+			middle_list.append(s_sequence.copy())
+			state = s_sequence[1:] + [(1 + s_sequence[0]) % k]
+			while state != s_sequence:
+				middle_list.append(state)
+				state = state[1:] + [(1 + state[0]) % k]
+			cycle_list.append(middle_list.copy())
+			middle_list.clear()
+		mark_number = 0
+	return cycle_list
+
+
 def pcr_cycles_joint_step1(k, n):
 	cycle_list = []
 	middle_list = ''
@@ -95,7 +115,7 @@ def pcr_cycles_joint_step1(k, n):
 	return cycle_list
 
 
-# a = pcr_cycles_joint_step1(3, 4)
+# a = pcr_cycles(3, 4)
 # print(a)
 
 
@@ -178,28 +198,6 @@ def k_ary_dB2(s_sequence, k):
 		if state is None:
 			state = s_sequence[:]
 		
-		x_max = find_first_max(state, k)
-		
-		if state[0] < x_max + 1 and x_max != -1:
-			state = state[1:] + [state[0] + 1]
-		elif state[0] == x_max + 1 and x_max != -1:
-			state = state[1:] + [0]
-		else:
-			state = state[1:] + [state[0]]
-		
-		retval.append(state[-1])
-		
-	return retval
-
-
-def k_ary_dB3(s_sequence, k):
-	state = None
-	retval = []
-	
-	while state != s_sequence:
-		if state is None:
-			state = s_sequence[:]
-		
 		conjugate_state = [state[0] + 1] + state[1:]
 		next_state = state[1:] + [state[0]]
 		
@@ -226,12 +224,61 @@ def k_ary_dB3(s_sequence, k):
 	return retval
 
 
-start = [0] * 5
-b = ''.join([str(x) for x in k_ary_dB3(start, 4)])
-# b += b
+def k_ary_dB3(s_sequence, k):
+	"""
+	论文中g1
+	"""
+	state = None
+	retval = []
+
+	while state != s_sequence:
+		if state is None:
+			state = s_sequence[:]
+
+		x_max = find_first_max(state, k)
+
+		if state[0] < x_max + 1 and x_max != -1:
+			state = state[1:] + [state[0] + 1]
+		elif state[0] == x_max + 1 and x_max != -1:
+			state = state[1:] + [0]
+		else:
+			state = state[1:] + [state[0]]
+
+		retval.append(state[-1])
+
+	return retval
+
+
+def k_ary_dB4(s_sequence, k):
+	"""
+	论文 中g1'
+	"""
+	state = None
+	retval = []
+
+	while state != s_sequence:
+		if state is None:
+			state = s_sequence[:]
+
+		x_max = find_first_max(state, k)
+
+		if 0 < state[0] <= x_max + 1 and x_max != -1:
+			state = state[1:] + [state[0] - 1]
+		elif state[0] == 0 and x_max != -1:
+			state = state[1:] + [x_max + 1]
+		else:
+			state = state[1:] + [state[0]]
+
+		retval.append(state[-1])
+
+	return retval
+
+
+start = [0] * 3
+b = ''.join([str(x) for x in k_ary_dB4(start, 3)])
+b += b
 print(len(b))
-# idx = b.find('0' * len(start))
-# print(b[idx:idx + 4 ** 3])
+idx = b.find('0' * len(start))
+print(b[idx:idx + 3 ** 3])
 # print(check_out(4, 11, b))
 print(time.perf_counter() - start_time, "seconds")
-

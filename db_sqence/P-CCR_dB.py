@@ -1,4 +1,5 @@
 from check_out import check_out
+from important_character import b_m
 
 
 def find_nk(s_sequence):
@@ -453,12 +454,14 @@ def alg_shift_orderE(s_sequence):
 	return retval
 
 
-for n in range(6, 7):
+for n in range(4, 5):
 	start = [0] * n
-	s = ''.join([str(x) for x in alg_shift_orderE(start)])
+	s = ''.join([str(x) for x in alg_shift_orderC(start)])
 	s += s
 	idx = s.find('0' * len(start))
+	# b = s[idx:idx + 2 ** (len(start))]
+	# print(b_m(b[1:]))
 	print(s[idx:idx + 2 ** (len(start))])
-	print(len(s))
-	print(n)
-	# print(check_out(n, s))
+	# print(len(s))
+	# print(n)
+	# # print(check_out(n, s))

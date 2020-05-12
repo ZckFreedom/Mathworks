@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53e36b27-bdc8-485a-95de-2d125a3d965a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/new_way_PCCR.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools/cui_work.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools/cui_work.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dB_for_powers.py" beforeDir="false" afterPath="$PROJECT_DIR$/dB_for_powers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k_ary_dB.py" beforeDir="false" afterPath="$PROJECT_DIR$/k_ary_dB.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他论文中用到的/lin.py" beforeDir="false" afterPath="$PROJECT_DIR$/其他论文中用到的/lin.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,15 +19,17 @@
     <SUITE FILE_PATH="coverage/db_sqence$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1575382114318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
     <SUITE FILE_PATH="coverage/db_sqence$PSR_dB.coverage" NAME="PSR_dB Coverage Results" MODIFIED="1573722242970" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/db_sqence$new_way_PCCR.coverage" NAME="new_way_PCCR Coverage Results" MODIFIED="1575451550865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/db_sqence$cui_work.coverage" NAME="cui_work Coverage Results" MODIFIED="1575437076835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools" />
+    <SUITE FILE_PATH="coverage/db_sqence$cui_work.coverage" NAME="cui_work Coverage Results" MODIFIED="1576636234070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools" />
     <SUITE FILE_PATH="coverage/db_sqence$lin.coverage" NAME="lin Coverage Results" MODIFIED="1575382095363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/db_sqence$lin__1_.coverage" NAME="lin (1) Coverage Results" MODIFIED="1575382128692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/其他论文中用到的" />
     <SUITE FILE_PATH="coverage/db_sqence$new_way_PSR.coverage" NAME="new_way_PSR Coverage Results" MODIFIED="1573722363031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/db_sqence$k_ary_dB.coverage" NAME="k_ary_dB Coverage Results" MODIFIED="1574234017904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/db_sqence$P_CCR_dB.coverage" NAME="P-CCR_dB Coverage Results" MODIFIED="1575370490075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/db_sqence$P_CCR_dB.coverage" NAME="P-CCR_dB Coverage Results" MODIFIED="1576038377807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/db_sqence$k_ary_dB.coverage" NAME="k_ary_dB Coverage Results" MODIFIED="1576038481119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/db_sqence$new_way_PCR.coverage" NAME="new_way_PCR Coverage Results" MODIFIED="1573718743388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/db_sqence$lin_.coverage" NAME="lin  Coverage Results" MODIFIED="1575858734944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/其他论文中用到的" />
     <SUITE FILE_PATH="coverage/db_sqence$PCR_dB.coverage" NAME="PCR_dB Coverage Results" MODIFIED="1573714401766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/db_sqence$A_way_of_q_Field.coverage" NAME="A_way_of_q_Field Coverage Results" MODIFIED="1574763254215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools" />
+    <SUITE FILE_PATH="coverage/db_sqence$dB_for_powers.coverage" NAME="dB_for_powers Coverage Results" MODIFIED="1576038992475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -45,73 +49,69 @@
     <session id="-382614347">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="21" />
+          <entry key="project.closed" value="28" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.26" value="4" />
           <entry key="project.open.time.27" value="2" />
           <entry key="project.open.time.28" value="1" />
+          <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.30" value="3" />
-          <entry key="project.open.time.31" value="2" />
+          <entry key="project.open.time.31" value="4" />
           <entry key="project.open.time.32" value="1" />
           <entry key="project.open.time.33" value="2" />
           <entry key="project.open.time.35" value="1" />
-          <entry key="project.open.time.36" value="1" />
+          <entry key="project.open.time.36" value="2" />
           <entry key="project.open.time.37" value="1" />
+          <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.40" value="2" />
           <entry key="project.open.time.41" value="1" />
+          <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.45" value="1" />
           <entry key="project.open.time.59" value="2" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.60" value="1" />
           <entry key="project.open.time.62" value="1" />
+          <entry key="project.open.time.68" value="1" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.78" value="1" />
           <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="32" />
+          <entry key="project.opened" value="41" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="14416" />
-          <entry key="txt" value="44" />
+          <entry key="py" value="14816" />
+          <entry key="txt" value="94" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="44" />
-          <entry key="Python" value="14416" />
+          <entry key="PLAIN_TEXT" value="94" />
+          <entry key="Python" value="14816" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="101" />
+          <entry key="py" value="109" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="101" />
+          <entry key="Python" value="109" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/new_way_PCCR.py">
+        <entry file="file://$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools/cui_work.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="248" column="38" lean-forward="true" selection-start-line="248" selection-start-column="38" selection-end-line="248" selection-end-column="38" />
+            <state relative-caret-position="208">
+              <caret line="99" column="52" selection-start-line="99" selection-start-column="52" selection-end-line="99" selection-end-column="52" />
               <folding>
-                <element signature="e#2233#3229#0" />
-                <element signature="e#5032#6118#0" />
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/其他论文中用到的/easy_db.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="262" column="24" lean-forward="true" selection-start-line="262" selection-start-column="24" selection-end-line="262" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -145,7 +145,6 @@
         <option value="$PROJECT_DIR$/PSR_dB.py" />
         <option value="$PROJECT_DIR$/new_way_PSR.py" />
         <option value="$PROJECT_DIR$/check_out.py" />
-        <option value="$PROJECT_DIR$/k_ary_dB.py" />
         <option value="$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools/PolynomialsForFq.py" />
         <option value="$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools/A_way_of_q_Field.py" />
         <option value="$PROJECT_DIR$/P-CCR_dB.py" />
@@ -153,9 +152,12 @@
         <option value="$PROJECT_DIR$/其他论文中用到的/new_mission.py" />
         <option value="$PROJECT_DIR$/其他论文中用到的/easy_db.py" />
         <option value="$PROJECT_DIR$/其他论文中用到的/new_way_PSR.py" />
-        <option value="$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools/cui_work.py" />
         <option value="$PROJECT_DIR$/其他论文中用到的/new_way_PCR.py" />
         <option value="$PROJECT_DIR$/new_way_PCCR.py" />
+        <option value="$PROJECT_DIR$/其他论文中用到的/lin.py" />
+        <option value="$PROJECT_DIR$/dB_for_powers.py" />
+        <option value="$PROJECT_DIR$/k_ary_dB.py" />
+        <option value="$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools/cui_work.py" />
       </list>
     </option>
   </component>
@@ -211,13 +213,7 @@
             <path>
               <item name="db_sqence" type="b2602c69:ProjectViewProjectNode" />
               <item name="db_sqence" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="db_sqence" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="db_sqence" type="b2602c69:ProjectViewProjectNode" />
-              <item name="db_sqence" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="db_sqence" type="462c0819:PsiDirectoryNode" />
-              <item name="其他论文中用到的" type="462c0819:PsiDirectoryNode" />
+              <item name="fundamental_tools" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -245,7 +241,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.new_way_PCCR">
+  <component name="RunManager" selected="Python.cui_work">
     <configuration name="P-CCR_dB" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="db_sqence" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -268,28 +264,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="PolynomialsForFq" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="db_sqence" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools/PolynomialsForFq.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="cui_work" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="db_sqence" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -304,6 +278,50 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools/cui_work.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="dB_for_powers" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="db_sqence" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dB_for_powers.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="k_ary_dB" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="db_sqence" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/k_ary_dB.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -334,39 +352,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="new_way_PCCR" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="db_sqence" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/new_way_PCCR.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.P-CCR_dB" />
-      <item itemvalue="Python.cui_work" />
-      <item itemvalue="Python.PolynomialsForFq" />
       <item itemvalue="Python.lin " />
-      <item itemvalue="Python.new_way_PCCR" />
+      <item itemvalue="Python.dB_for_powers" />
+      <item itemvalue="Python.k_ary_dB" />
+      <item itemvalue="Python.cui_work" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.new_way_PCCR" />
         <item itemvalue="Python.cui_work" />
-        <item itemvalue="Python.lin " />
+        <item itemvalue="Python.k_ary_dB" />
+        <item itemvalue="Python.dB_for_powers" />
         <item itemvalue="Python.P-CCR_dB" />
-        <item itemvalue="Python.PolynomialsForFq" />
+        <item itemvalue="Python.lin " />
       </list>
     </recent_temporary>
   </component>
@@ -430,13 +429,28 @@
       <option name="project" value="LOCAL" />
       <updated>1575385013019</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="整理后的论文中用到的算法">
+      <created>1575519480909</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1575519480909</updated>
+    </task>
+    <task id="LOCAL-00009" summary="修改后的方法，应该可以再修改">
+      <created>1575519509183</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1575519509183</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20347957" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.21860817" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -451,7 +465,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" weight="0.32973805" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info active="true" anchor="bottom" x="0" y="23" width="1366" height="745" id="Python Console" order="12" type="WINDOWED" visible="true" weight="0.32973805" />
+      <window_info anchor="bottom" x="0" y="23" width="1366" height="745" id="Python Console" order="12" type="WINDOWED" weight="0.32973805" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -507,7 +521,9 @@
     <MESSAGE value="更改位置" />
     <MESSAGE value="论文中的算法" />
     <MESSAGE value="其他论文中的算法" />
-    <option name="LAST_COMMIT_MESSAGE" value="其他论文中的算法" />
+    <MESSAGE value="整理后的论文中用到的算法" />
+    <MESSAGE value="修改后的方法，应该可以再修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改后的方法，应该可以再修改" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -527,20 +543,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/123.py" />
-    <entry file="file://$PROJECT_DIR$/dB_for_powers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="41" column="21" lean-forward="true" selection-start-line="25" selection-start-column="4" selection-end-line="41" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/k_ary_dB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/new_mission.py" />
     <entry file="file://$PROJECT_DIR$/easy_db.py" />
     <entry file="file://$PROJECT_DIR$/PSR_dB.py" />
@@ -577,13 +579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/其他论文中用到的/lin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/其他论文中用到的/new_way_PSR.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -612,46 +607,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools/cui_work.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/P-CCR_dB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1104">
-          <caret line="312" selection-start-line="312" selection-end-line="312" />
-          <folding>
-            <element signature="e#60#283#0" />
-            <element signature="e#314#581#0" />
-            <element signature="e#611#837#0" />
-            <element signature="e#869#1137#0" />
-            <element signature="e#1174#1374#0" />
-            <element signature="e#1409#2007#0" />
-            <element signature="e#2042#2563#0" />
-            <element signature="e#2598#3146#0" />
-            <element signature="e#3178#3505#0" />
-            <element signature="e#3535#4401#0" />
-            <element signature="e#4434#4731#0" />
-            <element signature="e#4770#5113#0" />
-            <element signature="e#5149#5813#0" />
-            <element signature="e#5849#6526#0" />
-            <element signature="e#6562#7232#0" />
-            <element signature="e#7270#7810#0" />
-            <element signature="e#7848#8469#0" />
-            <element signature="e#8507#9226#0" />
-            <element signature="e#9264#9888#0" />
-            <element signature="e#9926#10520#0" />
-            <marker date="1575372563752" expanded="true" signature="1172:1377" ph="..." />
-            <marker date="1575372563752" expanded="true" signature="3176:3509" ph="..." />
-            <marker date="1575372563752" expanded="true" signature="4042:4161" ph="..." />
-            <marker date="1575372563752" expanded="true" signature="4768:5116" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/其他论文中用到的/new_mission.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1324">
@@ -666,26 +621,57 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-321">
           <caret line="161" column="37" lean-forward="true" selection-start-line="161" selection-start-column="37" selection-end-line="161" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/其他论文中用到的/easy_db.py">
+    <entry file="file://$PROJECT_DIR$/其他论文中用到的/lin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="262" column="24" lean-forward="true" selection-start-line="262" selection-start-column="24" selection-end-line="262" selection-end-column="24" />
+        <state relative-caret-position="368">
+          <caret line="184" column="24" selection-start-line="184" selection-start-column="24" selection-end-line="184" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/new_way_PCCR.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="248" column="38" lean-forward="true" selection-start-line="248" selection-start-column="38" selection-end-line="248" selection-end-column="38" />
+        <state relative-caret-position="-1623">
+          <caret line="139" column="31" selection-start-line="139" selection-start-column="31" selection-end-line="139" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/其他论文中用到的/easy_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="262" column="24" selection-start-line="262" selection-start-column="24" selection-end-line="262" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/P-CCR_dB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3049">
+          <caret line="312" selection-start-line="312" selection-end-line="312" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dB_for_powers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/k_ary_dB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="53" column="51" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Finite_fields&amp;Signal_design/fundamental_tools/cui_work.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="99" column="52" selection-start-line="99" selection-start-column="52" selection-end-line="99" selection-end-column="52" />
           <folding>
-            <element signature="e#2233#3229#0" />
-            <element signature="e#5032#6118#0" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>

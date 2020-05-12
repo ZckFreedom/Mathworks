@@ -1,6 +1,4 @@
 import Polynomials_Field
-import time
-from randomness_measurements import games_chan
 
 
 def generator_of_all_sequnces(sequence_order):
@@ -62,13 +60,9 @@ def cycles_of_FSR_for6(ns):
 	return cycle_list
 
 
-# list1 = cycles_of_FSR(8)
-# cnt = 0
-# for i in range(0, len(list1)):
-# 	print(list1[i])
-# 	if list1[i][0][0] != list1[i][0][-1]:
-# 		cnt += 1
-# print(cnt)
+list1 = cycles_of_FSR(5)
+for i in range(0, len(list1)):
+	print(list1[i])
 
 
 def alg_common_A(s_sequence):

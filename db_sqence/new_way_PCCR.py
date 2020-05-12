@@ -1,4 +1,5 @@
 from itertools import combinations
+from important_character import b_m, games_chan
 
 
 def find_nk(s_sequence):
@@ -233,22 +234,39 @@ def alg_C1(s_sequence, k_number):
 	return retval
 
 
-start = [0] * 6
-store = [2, 3, 4]
+start = [0] * 11
+store = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 db_sequences = []
-# for t in range(1, 5):
-# 	all_ki = list(combinations(store, t))
-# 	for k in range(0, len(all_ki)):
-# 		s = ''.join([str(x) for x in alg_C(start, all_ki[k])])
-# 		s += s
-# 		idx = s.find('0' * len(start))
-# 		if s[idx:idx + 2 ** (len(start))] not in db_sequences:
-# 			db_sequences.append(s[idx:idx + 2 ** (len(start))])
-# 			print(all_ki[k], s[idx:idx + 2 ** (len(start))])
-for t in range(1, 13):
+for t in range(1, 10):
+	all_ki = list(combinations(store, t))
+	for k in range(0, len(all_ki)):
+		s = ''.join([str(x) for x in alg_C(start, all_ki[k])])
+		s += s
+		idx = s.find('0' * len(start))
+		if s[idx:idx + 2 ** (len(start))] not in db_sequences:
+			db_sequences.append(s[idx:idx + 2 ** (len(start))])
+			# d = s[idx+1:idx + 2 ** (len(start))]
+			# d += d
+			# print(b_m(d))
+			# print(all_ki[k], s[idx:idx + 2 ** (len(start))])
+			# print(games_chan(s[idx:idx + 2 ** (len(start))]))
+for t in range(1, 27720):
 	s = ''.join([str(x) for x in alg_C1(start, t)])
 	s += s
 	idx = s.find('0' * len(start))
 	if s[idx:idx + 2 ** (len(start))] not in db_sequences:
 		db_sequences.append(s[idx:idx + 2 ** (len(start))])
-		print('k='+str(t), '&'+s[idx:idx + 2 ** (len(start))])
+		# d = s[idx+1:idx + 2 ** (len(start))]
+		# d += d
+		# print(b_m(d))
+		# print('k='+str(t), '&'+s[idx:idx + 2 ** (len(start))])
+for s in db_sequences:
+	d = s[1:]
+	d += d
+	c = 0
+	mp, lc = b_m(d)
+	if lc == 2046:
+		for a in mp:
+			c += a
+		print(c)
+

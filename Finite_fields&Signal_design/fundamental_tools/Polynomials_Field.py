@@ -613,10 +613,15 @@ class PolynomialsField:
 		return self._home
 
 
-# h1 = [1,1,0,0,0,1,0,1,1]
-# h2 = [1,1,1]
-# h1 = [1,1,1]
-# g1 = PolynomialsField(h1,2)
+# h1 = [1, 1, 0, 1, 1, 1, 0, 1, 1]
+# h2 = [1, 1, 0, 0, 1]
+# h3 = [1, 0, 0, 1, 1]
+# g1 = PolynomialsField(h1, 2)
+# g2 = PolynomialsField(h2, 2)
+# g3 = PolynomialsField(h3, 2)
+# # if g1.is_irreducible():
+# # 	print(1)
+# print(g1 % g2, g1 % g3)
 # h2 = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
 # g2 = PolynomialsField(h2,2)
 # # print(g1%g2)
