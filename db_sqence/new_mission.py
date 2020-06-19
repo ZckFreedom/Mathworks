@@ -1,4 +1,5 @@
 from dB_for_powers import generator_of_all_sequnces
+from important_character import games_chan, b_m
 
 
 # sequence_a = [0, 0, 0, 1, 1, 1, 0, 1]
@@ -96,4 +97,27 @@ def get_s(n):
 	return seq
 
 
-print(get_s(5))
+# print(get_s(5))
+
+def generate_m_sequence(n):
+	sequence = [0] * (n-1)
+	sequence += [1]
+	retval = []
+	state = None
+	
+	while state != sequence:
+		if state is None:
+			state = sequence[:]
+		
+		retval.append(state[0])
+		state = state[1:] + [(state[0] + state[10] + state[6] + state[1]) % 2]
+	return retval
+
+
+corresponding_sequence = '0'
+m_sequence = ''.join([str(x) for x in generate_m_sequence(14)])
+corresponding_sequence += m_sequence
+print(games_chan(corresponding_sequence))
+print(b_m(m_sequence)[1])
+
+

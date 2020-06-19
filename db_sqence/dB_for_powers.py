@@ -58,11 +58,11 @@ def cycles_of_FSR_for6(ns):
 			middle_list.clear()
 		mark_number = 0
 	return cycle_list
-
-
-list1 = cycles_of_FSR(5)
-for i in range(0, len(list1)):
-	print(list1[i])
+#
+#
+# list1 = cycles_of_FSR(5)
+# for i in range(0, len(list1)):
+# 	print(list1[i])
 
 
 def alg_common_A(s_sequence):
@@ -368,3 +368,21 @@ def alg_A_for6(s_sequence):
 # 				# print(2 ** n)
 # 				# print(games_chan(s))
 # 				# print(time.perf_counter() - start_time, "seconds")
+def cyclesofccr(ns):
+	cycle_list = []
+	middle_list = []
+	mark_number = 0
+	for s_sequence in generator_of_all_sequnces(ns):
+		for mark in range(0, len(cycle_list)):
+			if s_sequence in cycle_list[mark]:
+				mark_number = 1
+		if mark_number == 0:
+			middle_list.append(s_sequence.copy())
+			state = s_sequence[1:] + [(s_sequence[0] + 1) % 2]
+			while state != s_sequence:
+				middle_list.append(state)
+				state = state[1:] + [(state[0] + state[1] + state[-1]) % 2]
+			cycle_list.append(middle_list.copy())
+			middle_list.clear()
+		mark_number = 0
+	return cycle_list
