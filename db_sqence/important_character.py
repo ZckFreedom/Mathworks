@@ -121,6 +121,114 @@ def b_m(sequence):
 	return mpl[-1], lcl[-1]
 
 
-# s = '000001111110101011010010100010111011000110010000100110111100111000001111110101011010010100010111011000110010000100110111100111'
-# # print(games_chan(s))
-# print(b_m(s))
+def generator_of_all_sequences(k, sequence_order):
+	cnt = 0
+	sequence = [0] * sequence_order
+	while cnt < k**sequence_order:
+		for bit in range(0, sequence_order):
+			bit_number = cnt // (k ** (sequence_order - 1 - bit))
+			sequence[bit] = bit_number % k
+		cnt += 1
+		yield sequence
+
+
+def check_out(ary, sequence_order, s_sequence):
+	not_such = []
+	for state in generator_of_all_sequences(ary, sequence_order):
+		se = ''.join([str(x) for x in state])
+		if s_sequence.find(se) == -1:
+			not_such.append(se)
+			# print('it is not a dB_sequence!')
+	if len(not_such) == 0:
+		return 1
+	else:
+		return not_such
+
+
+def if_nk(s_sequence):
+	size = len(s_sequence)
+	s = s_sequence[:]
+	s += s
+	states = []
+	
+	for i in range(0, size):
+		if s[i: i + size] not in states:
+			states.append(s[i: i + size])
+	
+	states.sort()
+	return s_sequence == states[0]
+
+
+def pcr_cycles(k, n):
+	cycle_list = []
+	middle_list = []
+	mark_number = 0
+	for s_sequence in generator_of_all_sequences(k, n):
+		for mark in range(0, len(cycle_list)):
+			if s_sequence in cycle_list[mark]:
+				mark_number = 1
+		if mark_number == 0:
+			middle_list.append(s_sequence.copy())
+			state = s_sequence[1:] + [s_sequence[0]]
+			while state != s_sequence:
+				middle_list.append(state)
+				state = state[1:] + [state[0]]
+			cycle_list.append(middle_list.copy())
+			middle_list.clear()
+		mark_number = 0
+	return cycle_list
+
+
+def ccr_cycles(k, n):
+	cycle_list = []
+	middle_list = []
+	mark_number = 0
+	for s_sequence in generator_of_all_sequences(k, n):
+		for mark in range(0, len(cycle_list)):
+			if s_sequence in cycle_list[mark]:
+				mark_number = 1
+		if mark_number == 0:
+			middle_list.append(s_sequence.copy())
+			state = s_sequence[1:] + [(1 + s_sequence[0]) % k]
+			while state != s_sequence:
+				middle_list.append(state)
+				state = state[1:] + [(1 + state[0]) % k]
+			cycle_list.append(middle_list.copy())
+			middle_list.clear()
+		mark_number = 0
+	return cycle_list
+
+
+def pcr_cycles_joint_step1(k, n):
+	cycle_list = []
+	middle_list = ''
+	mark_number = 0
+	for s_sequence in generator_of_all_sequences(k, n):
+		for mark in range(0, len(cycle_list)):
+			if ''.join([str(x) for x in s_sequence]) in cycle_list[mark]:
+				mark_number = 1
+		if mark_number == 0:
+			x_max = 0
+			middle_list += '-->' + ''.join([str(x) for x in s_sequence.copy()])
+			middle_sequence = [s_sequence[0] + 1] + s_sequence[1:]
+			while if_nk(middle_sequence) is True:
+				x_max += 1
+				middle_sequence = [middle_sequence[0] + 1] + middle_sequence[1:]
+			middle_sequence.clear()
+			if x_max == 0:
+				state = s_sequence[1:] + [s_sequence[0]]
+			else:
+				state = s_sequence[1:] + [s_sequence[0] + 1]
+			while state != s_sequence:
+				middle_list += '-->' + ''.join([str(x) for x in state])
+				if if_nk(state) and state[0] < x_max:
+					state = state[1:] + [state[0] + 1]
+				elif if_nk(state) and state[0] == x_max:
+					state = state[1:] + [0]
+				else:
+					state = state[1:] + [state[0]]
+			cycle_list.append(middle_list)
+			middle_list = ''
+		mark_number = 0
+	return cycle_list
+

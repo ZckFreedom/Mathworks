@@ -23,7 +23,7 @@ def cyclotomic_cosets(p, n):
 			k = (k * p) % mod_number
 		while (i + 1) not in residue_list and len(residue_list) != 0:
 			i = i + 1
-	return (cyclotomic_list,leader_list)
+	return (cyclotomic_list, leader_list)
 
 
 def cyclotomic_cosets_mod_N(p, a):

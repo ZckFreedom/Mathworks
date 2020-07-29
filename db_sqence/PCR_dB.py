@@ -244,7 +244,7 @@ if __name__ == '__main__':
 	class2 = ['B2', 'D2']
 	class3 = ['H1', 'H2']
 	
-	for n in range(6, 7):
+	for n in range(4, 5):
 		start = [0] * n
 		for kind, alg in algs:
 			if kind in class1:

@@ -1,5 +1,6 @@
 from check_out import check_out
 
+
 def Psr_list(s_sequence):
 	size = len(s_sequence)
 	sums = 0
