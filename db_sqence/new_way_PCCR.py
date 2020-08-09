@@ -1,5 +1,4 @@
 from itertools import combinations
-from important_character import b_m, games_chan
 
 
 def find_nk(s_sequence):
@@ -62,12 +61,12 @@ class Shift_order_space:
 	def select_sort(self):
 		resort = self._shiftlist
 		for i in range(0, len(resort) - 1):
-			k = i
+			m = i
 			for j in range(i, len(resort)):
-				if resort[k][0] < resort[j][0]:
-					k = j
-			if i != k:
-				resort[i], resort[k] = resort[k], resort[i]
+				if resort[m][0] < resort[j][0]:
+					m = j
+			if i != m:
+				resort[i], resort[m] = resort[m], resort[i]
 
 
 def shift_order(s_sequence):
@@ -119,7 +118,7 @@ def alg_A(s_sequence, t_numbers):
 			change_state = state[1:] + [1]
 			local, shift_len = shift_order_for_1(change_state)
 			if number_len == 0:
-				answer = (local == t_numbers[0] - 1 and shift_len >= t_numbers[0]) or (local == 0 and shift_len < t_numbers[0])
+				answer = local == 0
 			else:
 				for i in range(0, len(number_list) - 1):
 					if number_list[i] <= shift_len < number_list[i + 1] and local == number_list[i] - 1:
@@ -159,7 +158,7 @@ def alg_C(s_sequence, t_numbers):
 			change_state = [0] + state[1:]
 			local, shift_len = shift_order(change_state)
 			if number_len == 0:
-				answer = (local == t_numbers[0] - 1 and shift_len >= t_numbers[0]) or (local == 0 and shift_len < t_numbers[0])
+				answer = local == 0
 			else:
 				for i in range(0, len(number_list) - 1):
 					if number_list[i] <= shift_len < number_list[i + 1] and local == number_list[i] - 1:
@@ -203,6 +202,37 @@ def alg_A1(s_sequence, k_number):
 	return retval
 
 
+def alg_A2(s_sequence, k_number):
+	state = None
+	retval = []
+
+	while state != s_sequence:
+		if state is None:
+			state = s_sequence[:]
+
+		answer = None
+		if state[1] == 0:
+			next_state = state[1:] + [1]
+			answer = next_state == find_conk(next_state)
+		elif state[1] == 1:
+			change_state = state[1:] + [1]
+			local, shift_len = shift_order_for_1(change_state)
+			mod_number = shift_len % k_number
+			if mod_number == 0:
+				mod_number = k_number
+			if local == mod_number - 1:
+				answer = True
+
+		if answer is True:
+			state = state[1:] + [1 - ((state[0] + state[1] + state[-1]) % 2)]
+		else:
+			state = state[1:] + [(state[0] + state[1] + state[-1]) % 2]
+
+		retval.append(state[-1])
+
+	return retval
+
+
 def alg_C1(s_sequence, k_number):
 	state = None
 	retval = []
@@ -234,39 +264,88 @@ def alg_C1(s_sequence, k_number):
 	return retval
 
 
-start = [0] * 11
-store = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-db_sequences = []
-for t in range(1, 10):
-	all_ki = list(combinations(store, t))
-	for k in range(0, len(all_ki)):
-		s = ''.join([str(x) for x in alg_C(start, all_ki[k])])
-		s += s
-		idx = s.find('0' * len(start))
-		if s[idx:idx + 2 ** (len(start))] not in db_sequences:
-			db_sequences.append(s[idx:idx + 2 ** (len(start))])
-			# d = s[idx+1:idx + 2 ** (len(start))]
-			# d += d
-			# print(b_m(d))
-			# print(all_ki[k], s[idx:idx + 2 ** (len(start))])
-			# print(games_chan(s[idx:idx + 2 ** (len(start))]))
-for t in range(1, 27720):
-	s = ''.join([str(x) for x in alg_C1(start, t)])
-	s += s
-	idx = s.find('0' * len(start))
-	if s[idx:idx + 2 ** (len(start))] not in db_sequences:
-		db_sequences.append(s[idx:idx + 2 ** (len(start))])
-		# d = s[idx+1:idx + 2 ** (len(start))]
-		# d += d
-		# print(b_m(d))
-		# print('k='+str(t), '&'+s[idx:idx + 2 ** (len(start))])
-for s in db_sequences:
-	d = s[1:]
-	d += d
-	c = 0
-	mp, lc = b_m(d)
-	if lc == 2046:
-		for a in mp:
-			c += a
-		print(c)
+def alg_C2(s_sequence, k_number):
+	state = None
+	retval = []
 
+	while state != s_sequence:
+		if state is None:
+			state = s_sequence[:]
+
+		answer = None
+		if state[-1] == 1:
+			gamma_state = []
+			for i in range(1, len(state) - 1):
+				gamma_state.append(1 - state[i])
+			gamma_state += [0, state[1]]
+			answer = (gamma_state == find_conk(gamma_state))
+		elif state[-1] == 0:
+			change_state = [0] + state[1:]
+			local, shift_len = shift_order(change_state)
+			mod_number = shift_len % k_number
+			if mod_number == 0:
+				mod_number = k_number
+			if local == mod_number - 1:
+				answer = True
+
+		if answer is True:
+			state = state[1:] + [1 - ((state[0] + state[1] + state[-1]) % 2)]
+		else:
+			state = state[1:] + [(state[0] + state[1] + state[-1]) % 2]
+
+		retval.append(state[-1])
+
+	return retval
+
+
+# start = [0] * 6
+# store = [2, 3, 4]
+# db_sequences = []
+# for t in range(0, 4):
+# 	all_ki = list(combinations(store, t))
+# 	for k in range(0, len(all_ki)):
+# 		s = ''.join([str(x) for x in alg_A(start, all_ki[k])])
+# 		s += s
+# 		idx = s.find('0' * len(start))
+# 		if s[idx:idx + 2 ** (len(start))] not in db_sequences:
+# 			db_sequences.append(s[idx:idx + 2 ** (len(start))])
+# 			print(all_ki[k], s[idx:idx + 2 ** (len(start))])
+# for t in range(1, 12):
+# 	s = ''.join([str(x) for x in alg_A2(start, t)])
+# 	s += s
+# 	idx = s.find('0' * len(start))
+# 	# if s[idx:idx + 2 ** (len(start))] not in db_sequences:
+# 	# 	db_sequences.append(s[idx:idx + 2 ** (len(start))])
+# 	print('k='+str(t), '&'+s[idx:idx + 2 ** (len(start))])
+if __name__ == '__main__':
+	algs = [('Propositions3 case1', alg_A), ('Propositions3 case2', alg_A2), ('Propositions4', alg_A1),
+			('Propositions6 case1', alg_C), ('Propositions6 case2', alg_C2), ('Propositions7', alg_C1)]
+	print('1:Propositions3 case1', '\n', '2:Propositions3 case2', '\n', '3:Propositions4', '\n',
+		  '4:Propositions6 case1', '\n', '5:Propositions6 case2', '\n', '6:Propositions7', sep='')
+	alg_case = int(input('input case:'))
+	n = int(input('input order:'))
+	start = [0] * n
+	if alg_case in [1, 4]:
+		print('{}:'.format(algs[alg_case-1][0]))
+		alg_chose = algs[alg_case-1][1]
+		store = []
+		for i in range(2, n - 1):
+			store.append(i)
+		db_sequences = []
+		for t in range(0, n-2):
+			all_ki = list(combinations(store, t))
+			for k in range(0, len(all_ki)):
+				s = ''.join([str(x) for x in alg_chose(start, all_ki[k])])
+				s += s
+				idx = s.find('0' * len(start))
+				ks = '{1,'
+				for i in range(len(all_ki[k])):
+					ks += str(all_ki[k][i])
+					ks += ','
+				ks += '{}'.format(n-1)
+				ks += '}'
+				if s[idx:idx + 2 ** (len(start))] not in db_sequences:
+					db_sequences.append(s[idx:idx + 2 ** (len(start))])
+					print(ks, s[idx:idx + 2 ** (len(start))])
+	if alg_case in [2, 5]:
+		pass

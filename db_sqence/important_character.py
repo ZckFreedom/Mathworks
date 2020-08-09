@@ -199,6 +199,26 @@ def ccr_cycles(k, n):
 	return cycle_list
 
 
+def prr_cycles(k, n):
+	cycle_list = []
+	middle_list = []
+	mark_number = 0
+	for s_sequence in generator_of_all_sequences(k, n):
+		for mark in range(0, len(cycle_list)):
+			if s_sequence in cycle_list[mark]:
+				mark_number = 1
+		if mark_number == 0:
+			middle_list.append(s_sequence.copy())
+			state = s_sequence[1:] + [(s_sequence[1] + s_sequence[0] + s_sequence[-1]) % k]
+			while state != s_sequence:
+				middle_list.append(state)
+				state = state[1:] + [(state[1] + state[0] + state[-1]) % k]
+			cycle_list.append(middle_list.copy())
+			middle_list.clear()
+		mark_number = 0
+	return cycle_list
+
+
 def pcr_cycles_joint_step1(k, n):
 	cycle_list = []
 	middle_list = ''
@@ -232,3 +252,7 @@ def pcr_cycles_joint_step1(k, n):
 		mark_number = 0
 	return cycle_list
 
+
+cycle = prr_cycles(2, 6)
+for i in range(len(cycle)):
+	print(cycle[i])
