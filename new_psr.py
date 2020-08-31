@@ -92,4 +92,3 @@ for ks in range(1, 20):
     if s[idx:idx + 2 ** (len(start))] not in db_sequences:
         db_sequences.append(s[idx:idx + 2 ** (len(start))])
         print('k={}'.format(ks), s[idx:idx + 2 ** (len(start))])
-

@@ -1,6 +1,4 @@
-from Polynomials_Field import PolynomialsField
-
-
+# from Polynomials_Field import PolynomialsField
 def xor(s1, s2):
 	n = len(s1)
 	b = ''
@@ -17,7 +15,7 @@ def games_chan(db):
 	求db序列的线性复杂度
 	"""
 	sequence = db
-	f = PolynomialsField([1], 2)
+	# f = PolynomialsField([1], 2)
 	n = len(sequence)
 	liner_span = 0
 	b = ''
@@ -29,10 +27,10 @@ def games_chan(db):
 		else:
 			if n == 2:
 				liner_span += 2
-				f = f * (PolynomialsField([1, 1], 2) ** 2)
+				# f = f * (PolynomialsField([1, 1], 2) ** 2)
 			else:
 				liner_span += int(n / 2)
-				f = f * (PolynomialsField([1, 1], 2) ** int(n/2))
+				# f = f * (PolynomialsField([1, 1], 2) ** int(n/2))
 			sequence = b
 		n = int(n/2)
 	if b == '0' * len(b):
@@ -253,6 +251,6 @@ def pcr_cycles_joint_step1(k, n):
 	return cycle_list
 
 
-cycle = prr_cycles(2, 6)
-for i in range(len(cycle)):
-	print(cycle[i])
+# cycle = prr_cycles(2, 6)
+# for i in range(len(cycle)):
+# 	print(cycle[i])
