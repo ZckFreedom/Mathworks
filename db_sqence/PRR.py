@@ -82,8 +82,9 @@ def alg_propositionSeven(s_sequence, t_numbers):
 		if state[1] == 0:
 			answer = if_conk(u_state)
 		else:
+			weight = hamming_weight(w_state)
 			for i in range(0, len(number_list) - 1):
-				if number_list[i] <= hamming_weight(w_state) < number_list[i + 1]:
+				if number_list[i] <= weight < number_list[i + 1]:
 					answer = shift_lastOne(w_state, number_list[i]-1)
 		
 		if answer:
@@ -184,7 +185,7 @@ db_sequences = []
 for t in range(0, 4):
 	all_ki = list(combinations(store, t))
 	for k in range(0, len(all_ki)):
-		s = ''.join([str(x) for x in alg_propositionSeven(start, all_ki[k])])
+		s = ''.join([str(x) for x in alg_propositionTwelve(start, all_ki[k])])
 		s += s
 		idx = s.find('0' * len(start))
 		ks = [1]
@@ -196,7 +197,7 @@ for t in range(0, 4):
 			db_sequences.append(s[idx:idx + 2 ** (len(start))])
 			print(ks, s[idx:idx + 2 ** (len(start))])
 # for t in range(20):
-# 	s = ''.join([str(x) for x in alg_propositionThirteen(start, t)])
+# 	s = ''.join([str(x) for x in alg_propositionNine(start, t)])
 # 	s += s
 # 	idx = s.find('0' * len(start))
 # 	if s[idx:idx + 2 ** (len(start))] not in db_sequences:
