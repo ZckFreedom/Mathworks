@@ -12,7 +12,18 @@ def generator_of_all_sequnces(sequence_order):
 		yield sequence
 
 
-def find_order(n_number):
+def if_nk(sequence):    #输入n-1长的序列，判断是否是necklace
+	period = 1
+	size = len(sequence)
+	for i in range(1, size):
+		if sequence[i] > sequence[i-period]:
+			period = i+1
+		elif sequence[i] < sequence[i-period]:
+			return False
+	return size % period == 0
+
+
+def find_order(n_number):       #找到最小的数order使得2的order次方大于输入n
 	pow_number = 1
 	order = 0
 	while pow_number < n_number:
@@ -56,6 +67,37 @@ def coeffcient_list(n_number):      #输入n，输出（1+x）^n的低于n次的
 	return coe_list
 
 
+def jesen_algorithm(sequence):   #Jesen的生成db序列的算法
+	state = None
+	retval = []
+	n = len(sequence)
+	coe_list = coeffcient_list(n)
+	cycle = cycle_lists(n)
+	cycle_represent = []
+	for i in range(len(cycle)):
+		cycle_represent.append(cycle[i][0])
+	
+	while state != sequence:
+		if state is None:
+			state = sequence[:]
+			
+		next_bit = 0
+		answer = 0
+		for j in range(n):
+			next_bit += coe_list[j] * state[j]
+		for j in range(len(cycle_represent)):
+			if state[1:] + [1] == cycle_represent[j] or state[1:] + [0] == cycle_represent[j]:
+				answer = True
+		
+		if answer:
+			state = state[1:] + [(1 - next_bit) % 2]
+		else:
+			state = state[1:] + [next_bit % 2]
+		
+		retval.append(state[-1])
+	return retval
+
+
 def cycle_lists(n_number):      #输入n，输出特征多项式为（1+x）^n的cycle
 	cycle_list = []
 	middle_list = []
@@ -66,8 +108,7 @@ def cycle_lists(n_number):      #输入n，输出特征多项式为（1+x）^n�
 		middle_list.append(sequence.copy())
 		next_bit = 0
 		for j in range(len(coe_list)):
-			if coe_list[j] == 1:
-				next_bit += sequence[j]
+			next_bit += coe_list[j] * sequence[j]
 		state = sequence[1:] + [next_bit % 2]
 		while state != sequence:
 			middle_list.append(state.copy())
@@ -138,6 +179,11 @@ def cycles_character(n_number):      #输入n，输出特征多项式为（1+x�
 # for i in range(4, 15):
 # 	cycles_character(i)
 # 	print(cycles_number(i))
+# cycles_character(6)
 
 
-cycles_character(9)
+start = [0] * 6
+s = ''.join([str(x) for x in jesen_algorithm(start)])
+s += s
+idx = s.find('0' * len(start))
+print(len(s), s[idx:idx + 2 ** (len(start))])
